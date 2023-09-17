@@ -7,8 +7,9 @@ const UserController = require('../controller/user');
 
 
 
-//Definir rutas
+//Definir todas mis rutas
 router.get('/user',UserController.pruebaUser);
+router.post('/register',UserController.register);
 
 
 
