@@ -22,7 +22,31 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-//Cargar corf rutas 
+//Cargar conf rutas
+const UserRoutes =  require('./routes/user');
+const PublicationRoutes = require('./routes/publication');
+const FollowRoutes = require('./routes/follow');
+
+//ruta de api
+app.use('/api', UserRoutes);
+app.use('/api', PublicationRoutes);
+app.use('/api', FollowRoutes);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Ruta de prueba
 app.get('/ruta-prueba', (req, res)=>{
